@@ -1,0 +1,17 @@
+version: '3.6'
+services: 
+    llm:
+        build: .
+        volumes: 
+            - ./:/app
+        environment: 
+            SHELL: /bin/bash
+        container_name: llm-jp
+        ports: 
+            - 8000:8000
+        entrypoint: "/usr/bin/python3 -m llama_cpp.server --model $MODEL --n_gpu_layers $N_GPU_LAYERS --host 0.0.0.0"
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - capabilities: [gpu]
