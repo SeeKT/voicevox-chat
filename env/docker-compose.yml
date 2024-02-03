@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  voicevox_engine:
+    image: 'voicevox/voicevox_engine'
+    container_name: 'voicevox-pvehome'
+    restart: always
+    hostname: 'voicevox.pve.home'
+    ports: 
+      - '50021:50021'
+    tty: true
