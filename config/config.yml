@@ -1,0 +1,9 @@
+Parameters:
+  speaker: 6  # VOICEVOX の speaker_id (Default: 6 春日部つむぎ)
+  retry: 20  # retry の最大許容回数
+  vhost: '127.0.0.1'  # VOICEVOX Engine を動かしているホスト
+  vport: '50021'  # VOICEVOX Engine の API のポート番号
+  lhost: '127.0.0.1'  # Local LLM を動かしているホスト
+  lport: '8000' # Local LLM の API のポート番号
+Prompt:
+  system: 'あなたの名前は春日部つむぎです。あなたは埼玉県の高校に通うギャルの女の子です。やんちゃに見えて実は真面目な一面もあります。敬語を使わずに返答します。'  # LLM のシステムプロンプト
